@@ -1,0 +1,39 @@
+Kashish Patel
+501050150
+
+Brief Summary 
+
+what we achieved and understand from this lab?
+we have learned and understand the use of myCompare, mySwap, and myCopy. The use if myCopy is to keep the position individual of data elements. Use of mySwap is to interchange the emement of the two arrays. use of myCompare is to return a negative number if and only x < y. to make an ease process of compiling file we use the make file instead of doing gcc -0 and gcc -c every line.
+
+
+
+
+Analysis of the sorting algorithms:-
+The best case for sorting algorithm is when all the numbers are sorted. The worst case is when the numbers are in reverse sorting. The average case is when the numbers are moderately sorted.
+
+For insertion Sort
+
+Best Case:- The algorith which is already in the right order. we will use the number 1 2 3 4 5 the result will be comparsion 4(n-1), swap 0(0)  and copies 5(2n-2). The time complexity will be (o(n)). (o stands for omega)
+
+
+Average case:- we will use the number 1 2 4 3 5 the result will be comparsion comparisons 5, swap 1(n(n-1)/2) and copies 5(2n-2). The time complexity will be between best and average
+
+
+
+worst case :- we will use the number in the reverse order like 5 4 3 2 1 the result will be comparsion 10(n(n-1)/2), swap 10 (n(n-1)/2), copies 5(2n-2). The time complexity will be (o(n^2)).
+
+
+
+For Merge Sorting
+
+Best case: we will use the number 1 2 3 4 5 result will be comparisons 7, swap 12 and copies 5.
+
+worst case: we will use the number 5 4 3 2 1 result will be comparisons 5, swap 12 and copies 7.
+
+Average case: we will use the number 1 3 2 5 4 result will be comparisons 7, swap 12 and copies 5.
+
+In this case the time complexity will be same which will be omega(n*log(n)).
+
+
+The insertion short and merge shorts has been implement successfully. in the starting of the lab the access was denying but after switching from the pascal to gag it compile successfully.

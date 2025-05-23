@@ -1,0 +1,99 @@
+Name:- Kashish Patel
+Subject:- COE 428
+
+Summarize your lab:
+
+  Part 1:
+     Works  Yes
+     
+  Part 2:
+     Works  Yes 
+
+
+
+Read me Question:- 
+
+
+To modify Requirement 1 to allow stand-alone tags in the XML document, you need to make the following changes:
+
+Update the regular expression used to match XML tags in the code that reads and parses the XML document to recognize stand-alone tags. You can modify the regular expression to allow for the slash character before the closing angle bracket (>) to indicate a stand-alone tag.
+
+Update the code that generates the XML document to include stand-alone tags when appropriate. For example, if an element has no content or attributes, it can be represented as a stand-alone tag.
+
+Update the XML schema to allow stand-alone tags by specifying the element as having an empty content model (i.e., no child elements or text content) and an empty attribute list.
+
+By making these changes, your XML document can include stand-alone tags and still be parsed and validated correctly.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+//the 3 functions from intStack.c
+extern int pop();
+extern void push(int);
+extern int isEmpty();
+
+int main(int argc, char * argv[])
+{
+	//the 3 variable functions
+  int ch;
+  int mainPop;
+
+  while ((ch = getchar()) != EOF)
+  {
+    if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/'))
+      continue;
+
+   //the input if ch == '<'
+  else if(ch == '<')
+   {
+   
+   //ch will be inserted an alphabet
+   ch = getchar();
+
+   //if statement checks if the "ch" is an alphabet, then push the character
+	if(isalpha(ch))
+      {
+		push(ch); 
+      }
+
+  //if statement starts with "/", the character will be popped out of the chain.
+   else if(ch == '/') 
+     {
+     ch = getchar();
+     mainPop = pop();						 
+
+ //it will be non-valid, then pop does not equal to the top character
+    if(mainPop != ch)
+	 {
+          
+	fprintf(stderr,"Non-Valid\n"); 
+	 exit(1); 
+	 }
+	
+  
+   else 
+	{
+	fprintf(stdout,"Valid\n"); 
+	exit(0); 
+	} 
+   }
+ }
+}
+  
+	
+    if(isEmpty()== 1) 
+	{
+		fprintf(stderr," Valid \n");
+		exit(1);   
+	}
+    else if (isEmpty() == 0)
+	{
+
+      fprintf(stdout,"Non-Valid\n");
+ 	  exit(0);   
+    }   
+   exit(0);
+  }

@@ -1,0 +1,26 @@
+Name :- Kashish Patel
+501050150
+
+During the programming I had many difficulties solving the problems. I have tried my best to complete the lab. I have done the 3 commands. I didn't get the change command to work and I couldn't figure out how to do the garbage commands so I did not complete that part of the code and I couldn't figure out the delete commands.
+
+I have not successfully completed the lab but I have done my best. I could have been more efficient but due to the midterm.
+
+Hello
+
+My personalised state machine description for Lab 4 (coe 428) follows:
+
+A E F
+B F D
+C G B
+D A G
+E H A
+F D H
+G B E
+H H C
+
+Your starting state is: D
+
+  
+.
+I have completed my lab 
+

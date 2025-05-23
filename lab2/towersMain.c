@@ -1,0 +1,52 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "towers.h"
+
+int main(int argc, char **argv)
+{
+	int n = 3;
+	int from = 1;
+	int dest = 2;
+	
+	// no argumnet
+	if(argc ==1)
+	     n=3;
+		from=1;
+		dest=2;
+	
+	// One argument
+	if(argc==2)
+	n = atoi(argv[1]);
+	
+	if (n < 0) {
+            fprintf(stderr, "Error.\n");
+            exit(1); 
+		}
+	
+
+	// Three argument
+	else if(argc>=3){
+		
+		n = atoi(argv[1]);
+		from = atoi(argv[2]);
+		dest=atoi(argv[3]);
+		
+		if (n < 0) {
+            fprintf(stderr, "Error.\n");
+            exit(1); 
+		}
+		
+		if ((from < 1 || from > 3) || (dest < 1 ||  dest > 3) || (from == dest))
+		
+		{
+			fprintf(stderr,"Error");
+			exit(1);
+			
+		}
+
+	        
+	}
+	towers(n, from, dest);
+	exit(0);
+}
+
